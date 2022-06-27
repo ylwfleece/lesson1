@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>My website</title>
+</head>
+<body>
+    <h1>hello</h1>
+    <script>
+        // write a script that says hello to me in my favorite color
+
+        // declare a variable named me 
+        // assign it the value of your first name
+        let me = {
+            firstName: 'Max', 
+            favColor: 'blue'
+        };
+
+        // get the header element and save it as a variable called header
+        let header = document.querySelector('h1');
+
+        // create an addName function that adds your name to the header 
+        function addName(name) {
+            header.innerHTML += `, ${name}`;
+        }
+
+        // create a changeColor function that changes color of your header 
+        // add a line that adds some space to its left side
+        function changeColor(color) {
+            header.style.color = color;
+            // header.style.marginLeft = '50px';
+            // header.style.textDecoration = 'underline'
+            // header.style.textAlign = 'center'
+
+        }
+
+        // create a function that combines (calls) both functions
+        function changeColorAddName() {
+            addName(me.firstName);
+            changeColor(me.favColor);
+        }
+
+        // call our combined function
+        changeColorAddName();
+
+    </script>
+</body>
+</html>
